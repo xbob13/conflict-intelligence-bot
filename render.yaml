@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: conflict-intelligence-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: DISCORD_BOT_TOKEN
+        sync: false
+      - key: CHANNEL_ID
+        value: "943944546146988065"
